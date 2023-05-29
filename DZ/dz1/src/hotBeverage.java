@@ -1,8 +1,9 @@
 public class hotBeverage extends Product{
     protected int temperature;
 
-    public hotBeverage(String name, int volume, int temperature) {
+    public hotBeverage(int id, String name, int volume, int temperature) {
         this.temperature = temperature;
+        super.id = id;
         super.name = name;
         super.volume = volume;
     }
@@ -10,6 +11,7 @@ public class hotBeverage extends Product{
     public int getTemperature() {
         return temperature;
     }
+    public int getId(){return 0;}
     public String getName(){
         return super.name;
     }
@@ -34,11 +36,13 @@ public class hotBeverage extends Product{
     }
 
     @Override
+    public void setId() {super.id = id; }
+
+    @Override
     public String toString() {
-        return "hotBeverage{" +
-                "name = '" + name +
-                ", volume = " + volume +"mg"+
-                ", temperature = " + temperature +"gr"+'\''+
-                '}';
+        return "id: "+id+
+                " - Тип напитка: '" + name +
+                ", объем = " + volume +"мг."+
+                ", температура = " + temperature +"гр."+"\n"+'\'';
     }
 }
