@@ -11,6 +11,7 @@ public class HotBeverageMashine implements VendingMashine {
         this.drink = drink;
     }
 
+
     public ArrayList<Product> getProduct() {
         int valMenu=0;
         Scanner scan = new Scanner(System.in);
@@ -24,6 +25,7 @@ public class HotBeverageMashine implements VendingMashine {
           if(nextProduct.id == valMenu){
               System.out.println("Наливаю "+nextProduct.name);
               productIterator.remove();
+              //System.out.println(drink.sort(new PriceComporator());
               return drink;
           }else {
               count++;
