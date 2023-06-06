@@ -1,3 +1,5 @@
+
+//
 public class hotBeverage extends Product implements Comparable<Product>{
     protected int temperature;
 

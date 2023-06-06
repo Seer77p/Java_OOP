@@ -1,3 +1,4 @@
+//
 public abstract class Product implements Comparable<Product>{
     protected int id;
     protected String name;
