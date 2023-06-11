@@ -23,18 +23,8 @@ public class Main {
         students1.add(new model.Student(107, "Olga"));
         model.Subject subject1 = model.Subject.PHYSICS;
 
-        // Создание контроллера
         Controller controller = new Controller();
 
-        // Получение списка студентов (их id)
-//        List<Integer> studentIds = controller.getStudentIds(students);
-//        System.out.println("Список студентов (id): " + studentIds);
-//
-//        // Получение id преподавателя
-//        int teacherId = controller.getTeacherId(teacher);
-//        System.out.println("ID преподавателя: " + teacherId);
-
-        // Формирование учебной группы
         StudyGroup studyGroup = controller.createStudyGroup(teacher, students, subject);
         System.out.println("Учебная группа: " + studyGroup);
         StudyGroup studyGroup1 = controller.createStudyGroup(teacher1, students1, subject1);
